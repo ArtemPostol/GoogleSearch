@@ -2,7 +2,7 @@
 
 <suite name="Google Search">
 
-    <test name="Search Test Chrome">
+    <test name="Google Search Test Chrome">
         <parameter name="browserType" value="Chrome"/>
         <parameter name="envURL" value="https://www.google.com/" />
         <classes>
@@ -11,7 +11,7 @@
     </test>
 
 
-    <test name="Search Test Firefox">
+    <test name="Google Search Test Firefox">
         <parameter name="browserType" value="Firefox"/>
         <parameter name="envURL" value="https://www.google.com/" />
         <classes>
