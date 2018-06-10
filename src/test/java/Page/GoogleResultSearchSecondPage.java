@@ -1,34 +1,35 @@
+package Page;
+
+import Page.GoogleBasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GoogleResultSearchPage extends GoogleBasePage {
+
+import java.util.List;
+
+public class GoogleResultSearchSecondPage extends GoogleBasePage {
 
     @FindBy(xpath = "//div [@id='resultStats']")
     private WebElement resultStats;
 
-    @FindBy(xpath = "//a [@aria-label='Page 2']")
-    private WebElement linnkSecondPage;
-
+    @FindBy(xpath = "//div [@class='srg']/div [@class='g']")
+    private List<WebElement> searchResults;
 
     /**
      * Constructor of BasePage
      *
      * @param webDriver - webDriver instance
      */
-    public GoogleResultSearchPage(WebDriver webDriver) {
+    public GoogleResultSearchSecondPage(WebDriver webDriver) {
         super(webDriver);
         PageFactory.initElements(webDriver, this);
     }
 
     @Override
-    boolean isPageLoaded() {
+    public boolean isPageLoaded() {
         return resultStats.isDisplayed();
-    }
-
-    public WebElement waitUntilElementIsClickable () {
-        return super.waitUntilElementIsClickable(linnkSecondPage, 10);
     }
 
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Google Search">
+
+    <test name="Search Test Chrome">
+        <parameter name="browserType" value="Chrome"/>
+        <parameter name="envURL" value="https://www.google.com/" />
+        <classes>
+            <class name="Test.GoogleSearchTest" />
+        </classes>
+    </test>
+
+
+    <test name="Search Test Firefox">
+        <parameter name="browserType" value="Firefox"/>
+        <parameter name="envURL" value="https://www.google.com/" />
+        <classes>
+            <class name="Test.GoogleSearchTest" />
+        </classes>
+    </test>
+
+
+</suite>

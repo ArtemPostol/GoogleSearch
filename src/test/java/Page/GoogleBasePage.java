@@ -1,3 +1,5 @@
+package Page;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,16 +34,6 @@ public abstract class GoogleBasePage {
         return webElement;
     }
 
-    /** Method wait until elemet stay visible
-     * @param webElement - return webElement
-     * @param timeOutInSeconds - time for wait
-     * @return
-     */
-    public WebElement waitUntilElementIsVisible (WebElement webElement, int timeOutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(webDriver, timeOutInSeconds);
-        wait.until(ExpectedConditions.visibilityOf(webElement));
-        return webElement;
-    }
 
     abstract boolean isPageLoaded();
 
